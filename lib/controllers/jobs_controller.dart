@@ -84,12 +84,12 @@ uploadJob(context) async {
      'p_ratings': initialRatings,
     'vendor_id': userId,
     'featured_id': '',
-    'p_price': ppriceController,
-    'p_district':pdicstrictController,
-    'p_ward':pwardController,
-    'p_street':pstreetController,
-    'p_requirement':preqController,
-    'p_role&responsible':prolresController,
+    'p_price': ppriceController.text,
+    'p_district':pdicstrictController.text,
+    'p_ward':pwardController.text,
+    'p_street':pstreetController.text,
+    'p_requirement':preqController.text,
+    'p_role&responsible':prolresController.text,
    'flashsales': false, 
   });
   isloading(false);
