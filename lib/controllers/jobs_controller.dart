@@ -15,9 +15,10 @@ class JobsController extends GetxController{
     var pquanitytController=TextEditingController();
      var preqController=TextEditingController();
       var prolresController=TextEditingController();
-       var pdicstrictController=TextEditingController();
-        var pstreetController=TextEditingController();
-        var pwardController=TextEditingController();
+       var paddressController=TextEditingController();
+        var pjobtypeController=TextEditingController();
+        var pgenderController=TextEditingController();
+        var pjobtimeController=TextEditingController();
 
     var categoryList=<String>[].obs;
     var subcategoryList=<String>[].obs;
@@ -61,9 +62,10 @@ void resetForm() {
     subcategoryvalue.value = '';
     preqController.clear();
       prolresController.clear();
-        pdicstrictController.clear();
-         pstreetController.clear();
-         pwardController.clear();
+        paddressController.clear();
+         pjobtypeController.clear();
+         pgenderController.clear();
+         pjobtimeController.clear();
   }
 
 uploadJob(context) async {
@@ -83,9 +85,9 @@ uploadJob(context) async {
     'vendor_id': userId,
     'featured_id': '',
     'p_price': ppriceController.text,
-    'p_district':pdicstrictController.text,
-    'p_ward':pwardController.text,
-    'p_street':pstreetController.text,
+    'p_district':paddressController.text,
+    'p_gender':pgenderController.text,
+    'p_street':pjobtypeController.text,
     'p_requirement':preqController.text,
     'p_role&responsible':prolresController.text,
    'flashsales': false, 
