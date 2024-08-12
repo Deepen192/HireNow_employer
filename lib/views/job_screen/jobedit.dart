@@ -69,29 +69,30 @@ class EditJobScreen extends StatelessWidget {
                customTextField(hint: "eg.You can use firebase",label: "Job Description",isDesc:true,controller: controller.pdescController),
                customTextField(hint: "eg.Bachelor holder",label: "Requirement",isDesc:true,controller: controller.preqController),
                customTextField(hint: "eg.Backend and Frontend",label: "Roles & Responsibilty",isDesc:true,controller: controller.prolresController),
-               customTextField(hint: "eg.Rupandehi",label: "District",isDesc:true,controller: controller.pdicstrictController),  
-               customTextField(hint: "eg.Supauli",label: "Street",isDesc:true,controller: controller.pstreetController),               
+               customTextField(hint: "eg.Rupandehi, Tilottama-15, Supauli",label: "Address",isDesc:true,controller: controller.paddressController),  
+               customTextField(hint: "eg.Halftime/Fulltime",label: "Job Type",isDesc:true,controller: controller.pjobtypeController),
+                customTextField(hint: "eg.Male/Female",label: "Gender",isDesc:true,controller: controller.pgenderController),                              
               10.heightBox,
-               TextFormField(
-                  controller: controller.pwardController,
-                  keyboardType: TextInputType.number,
-                  style: const TextStyle(color: whiteColor),
-                  decoration: InputDecoration(
-                    isDense: true,
-                    labelText: "Ward No.",
-                    labelStyle: const TextStyle(color: whiteColor),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: const BorderSide(color: whiteColor),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: const BorderSide(color: whiteColor),
-                    ),
-                    hintText: "eg. Rs.100",
-                    hintStyle: const TextStyle(color: lightGrey),
-                  ),
-                ),
+              //  TextFormField(
+              //     controller: controller.pwardController,
+              //     keyboardType: TextInputType.number,
+              //     style: const TextStyle(color: whiteColor),
+              //     decoration: InputDecoration(
+              //       isDense: true,
+              //       labelText: "Ward No.",
+              //       labelStyle: const TextStyle(color: whiteColor),
+              //       border: OutlineInputBorder(
+              //         borderRadius: BorderRadius.circular(12),
+              //         borderSide: const BorderSide(color: whiteColor),
+              //       ),
+              //       focusedBorder: OutlineInputBorder(
+              //         borderRadius: BorderRadius.circular(12),
+              //         borderSide: const BorderSide(color: whiteColor),
+              //       ),
+              //       hintText: "eg. Rs.100",
+              //       hintStyle: const TextStyle(color: lightGrey),
+              //     ),
+              //   ),
                 10.heightBox,
               TextFormField(
                   controller: controller.ppriceController,

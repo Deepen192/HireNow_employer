@@ -11,7 +11,7 @@
         {
             "name":"Programming & Tech",
             "subcategory":[
-               "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
 
@@ -21,7 +21,7 @@
         {
             "name":"Digital Marketing",
         "subcategory":[
-           "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
 
@@ -34,7 +34,7 @@
                 "name":"Video & Animation",
                 "subcategory":
                 [
-                    "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
                 ]
@@ -55,7 +55,7 @@
         {
             "name":"Writing & Translations",
             "subcategory":[
-           "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
         ]
@@ -65,7 +65,7 @@
         {
             "name":"Music & Audio",
             "subcategory":[
-          "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
         
@@ -75,7 +75,7 @@
         {
             "name":"Business",
             "subcategory":[
-               "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
 
@@ -85,7 +85,7 @@
         {
             "name":"Consulting",
             "subcategory":[
-               "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
 
@@ -96,7 +96,7 @@
         {
             "name":"AI Services",
             "subcategory":[
-             "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
 
@@ -107,7 +107,7 @@
         {
             "name":"Personal Growth",
             "subcategory":[
-              "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
 
@@ -118,7 +118,7 @@
         {
             "name":"Others",
             "subcategory":[
-               "Any", 
+                "Any", 
                 "Intermediate",
                 "Expert"
 

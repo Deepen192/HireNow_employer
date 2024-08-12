@@ -32,7 +32,11 @@ class Addjobs extends StatelessWidget {
         controller.pdescController.text.isEmpty ||
         controller.ppriceController.text.isEmpty ||
         controller.pquanitytController.text.isEmpty ||
-        controller.categoryvalue.isEmpty ||
+        controller.pgenderController.text.isEmpty ||
+        controller.preqController.text.isEmpty ||
+        controller.prolresController.text.isEmpty ||
+        controller.pjobtimeController.text.isEmpty ||
+        controller.pjobtypeController.text.isEmpty ||
         controller.subcategoryvalue.isEmpty) {
       // Inform the user to fill all the remaining fields
       showDialog(
@@ -77,31 +81,10 @@ class Addjobs extends StatelessWidget {
                customTextField(hint: "eg.Bachelor holder",label: "Requirement",isDesc:true,controller: controller.preqController),
                customTextField(hint: "eg.Backend and Frontend",label: "Roles & Responsibilty",isDesc:true,controller: controller.prolresController),
                customTextField(hint: "eg.District, Minicipality/Village, Street",label: "Full Address",isDesc:true,controller: controller.paddressController),  
-               customTextField(hint: "eg.Half time/Full time",label: "Job Type,",isDesc:true,controller: controller.pjobtypeController),
-               customTextField(hint: "eg.11am-5pm",label: "Job Time,",isDesc:true,controller: controller.pjobtimeController),
+               customTextField(hint: "eg.Half time/Full time",label: "Job Type",isDesc:true,controller: controller.pjobtypeController),
+               customTextField(hint: "eg.11am-5pm",label: "Job Time",isDesc:true,controller: controller.pjobtimeController),
                customTextField(hint: "eg.Male/Female",label: "Gender",isDesc:true,controller: controller.pgenderController),
-                                             
-              10.heightBox,
-              //  TextFormField(
-              //     controller: controller.pwardController,
-              //     keyboardType: TextInputType.number,
-              //     style: const TextStyle(color: whiteColor),
-              //     decoration: InputDecoration(
-              //       isDense: true,
-              //       labelText: "Ward No.",
-              //       labelStyle: const TextStyle(color: whiteColor),
-              //       border: OutlineInputBorder(
-              //         borderRadius: BorderRadius.circular(12),
-              //         borderSide: const BorderSide(color: whiteColor),
-              //       ),
-              //       focusedBorder: OutlineInputBorder(
-              //         borderRadius: BorderRadius.circular(12),
-              //         borderSide: const BorderSide(color: whiteColor),
-              //       ),
-              //       hintText: "eg. Rs.100",
-              //       hintStyle: const TextStyle(color: lightGrey),
-              //     ),
-              //   ),
+                                               
                 10.heightBox,
               TextFormField(
                   controller: controller.ppriceController,

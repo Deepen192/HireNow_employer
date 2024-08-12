@@ -24,13 +24,7 @@ class JobsController extends GetxController{
     var subcategoryList=<String>[].obs;
     List<Category>category=[];
      var categoryvalue=''.obs;
-    var subcategoryvalue=''.obs;
-    var pImagesLinks =[];
-    var pImagesList = RxList<dynamic>.generate(3, (index) => null);
-
-   
-    var selectedColorIndex=0.obs;
-    
+    var subcategoryvalue=''.obs;    
     
 
     getCategories() async{
@@ -76,6 +70,7 @@ uploadJob(context) async {
     'p_id': productId,
     'is_featured': false,
     'p_category': categoryvalue.value,
+    'p_subcategory': subcategoryvalue.value,
     'p_wishlist': FieldValue.arrayUnion([]),
     'p_desc': pdescController.text,
     'p_name': pnameController.text,   
@@ -85,9 +80,10 @@ uploadJob(context) async {
     'vendor_id': userId,
     'featured_id': '',
     'p_price': ppriceController.text,
-    'p_district':paddressController.text,
+    'p_jobaddress':paddressController.text,
     'p_gender':pgenderController.text,
-    'p_street':pjobtypeController.text,
+    'p_jobtime':pjobtimeController.text,
+    'p_jobtype':pjobtypeController.text,
     'p_requirement':preqController.text,
     'p_role&responsible':prolresController.text,
    'flashsales': false, 

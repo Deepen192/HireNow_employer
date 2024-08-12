@@ -20,14 +20,15 @@ class EditJobsController extends GetxController{
     var subcategoryvalue=''.obs;
      var preqController=TextEditingController();
       var prolresController=TextEditingController();
-       var pdicstrictController=TextEditingController();
-        var pstreetController=TextEditingController();
-        var pwardController=TextEditingController();
+         var paddressController=TextEditingController();
+        var pjobtypeController=TextEditingController();
+        var pgenderController=TextEditingController();
+        var pjobtimeController=TextEditingController();
   
     
 
    
-    var selectedColorIndex=0.obs;
+   
     
     void resetForm() {
     pnameController.clear();
@@ -38,9 +39,10 @@ class EditJobsController extends GetxController{
     categoryvalue.value = '';
     subcategoryvalue.value = '';
     preqController.clear();
-    pdicstrictController.clear();
-    pstreetController.clear();
-    pwardController.clear();
+    paddressController.clear();
+    pjobtypeController.clear();
+    pgenderController.clear();
+    pjobtimeController.clear();
 
 
    
@@ -61,9 +63,10 @@ Map<String, dynamic> productData = {}; // Store fetched product data
         pquanitytController.text = productData['p_quantity'];
          preqController.text=productData['p_requirement'];
          prolresController.text=productData['p_role&responsible'];
-    pdicstrictController.text=productData['p_district'];
-    pstreetController.text=productData['p_street'];
-    pwardController.text=productData['p_ward'];
+    paddressController.text=productData['p_jobaddress'];
+    pjobtypeController.text=productData['p_jobtype'];
+    pgenderController.text=productData['p_gender'];
+    pjobtimeController.text=productData['p_jobtime'];
        
         
       }
@@ -89,16 +92,17 @@ Future<void> updateJob(BuildContext context, String productId) async {
       'p_name': pnameController.text,
       'p_price': ppriceController.text,
       'p_quantity': pquanitytController.text,
-    'p_district':pdicstrictController.text,
-    'p_ward':pwardController.text,
-    'p_street':pstreetController.text,
+    'p_jobaddress':paddressController.text,
+    'p_gender':pgenderController.text,
+    'p_jobtime':pjobtimeController.text,
+    'p_jobtype':pjobtypeController.text,
     'p_requirement':preqController.text,
     'p_role&responsible':prolresController.text,
       // ... (other fields you want to update)
     });
 
     isloading(false);
-    VxToast.show(context, msg: "Product Updated");
+    VxToast.show(context, msg: "Job Updated");
   } catch (e) {
     print('Error updating product: $e');
   }
