@@ -1,0 +1,131 @@
+{
+    "categories":[
+        {
+            "name":"Graphics & Design",
+            "subcategory":[
+                "Any", 
+                "Intermediate",
+                "Expert"
+            ]
+        },
+        {
+            "name":"Programming & Tech",
+            "subcategory":[
+               "Any", 
+                "Intermediate",
+                "Expert"
+
+            ]
+        },
+
+        {
+            "name":"Digital Marketing",
+        "subcategory":[
+           "Any", 
+                "Intermediate",
+                "Expert"
+
+        ]  
+    
+    
+        },
+
+        {
+                "name":"Video & Animation",
+                "subcategory":
+                [
+                    "Any", 
+                "Intermediate",
+                "Expert"
+                ]
+
+        },
+
+        {
+            "name":"Sales & Accounting",
+            "subcategory": [
+                "Any", 
+                "Intermediate",
+                "Expert"
+
+            ]
+
+        },
+
+        {
+            "name":"Writing & Translations",
+            "subcategory":[
+           "Any", 
+                "Intermediate",
+                "Expert"
+        ]
+
+        },
+
+        {
+            "name":"Music & Audio",
+            "subcategory":[
+          "Any", 
+                "Intermediate",
+                "Expert"
+        
+        ]
+        },
+
+        {
+            "name":"Business",
+            "subcategory":[
+               "Any", 
+                "Intermediate",
+                "Expert"
+
+            ]
+        },
+
+        {
+            "name":"Consulting",
+            "subcategory":[
+               "Any", 
+                "Intermediate",
+                "Expert"
+
+            ]
+
+        },
+
+        {
+            "name":"AI Services",
+            "subcategory":[
+             "Any", 
+                "Intermediate",
+                "Expert"
+
+            ]
+
+        },
+
+        {
+            "name":"Personal Growth",
+            "subcategory":[
+              "Any", 
+                "Intermediate",
+                "Expert"
+
+            ]
+
+        }, 
+
+        {
+            "name":"Others",
+            "subcategory":[
+               "Any", 
+                "Intermediate",
+                "Expert"
+
+            ]
+
+        }
+
+        
+    ]
+}
