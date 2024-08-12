@@ -74,8 +74,6 @@ uploadJob(context) async {
     'p_id': productId,
     'is_featured': false,
     'p_category': categoryvalue.value,
-    'p_subcategory': subcategoryvalue.value,
-    'p_imgs': FieldValue.arrayUnion(pImagesLinks),
     'p_wishlist': FieldValue.arrayUnion([]),
     'p_desc': pdescController.text,
     'p_name': pnameController.text,   

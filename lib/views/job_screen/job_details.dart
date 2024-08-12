@@ -87,20 +87,20 @@ class JobsDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              VxSwiper.builder(
-                autoPlay: true,
-                height: 350,
-                itemCount: data['p_imgs'].length,
-                aspectRatio: 16 / 9,
-                viewportFraction: 1.0,
-                itemBuilder: (context, index) {
-                  return Image.network(
-                    data['p_imgs'][index],
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                  );
-                },
-              ),
+              // VxSwiper.builder(
+              //   autoPlay: true,
+              //   height: 350,
+              //   itemCount: data['p_imgs'].length,
+              //   aspectRatio: 16 / 9,
+              //   viewportFraction: 1.0,
+              //   itemBuilder: (context, index) {
+              //     return Image.network(
+              //       data['p_imgs'][index],
+              //       width: double.infinity,
+              //       fit: BoxFit.cover,
+              //     );
+              //   },
+              // ),
               const SizedBox(height: 10),
               // Wrapping the information section inside a box
               Container(
@@ -120,29 +120,6 @@ class JobsDetails extends StatelessWidget {
                     const SizedBox(height: 10),
                     boldText(text: "Price: Rs.${data['p_price']}", color: Colors.black, size: 18.0),
                     const SizedBox(height: 10),
-                    if (data['pd_price'] != null && data['pd_percentage'] != null)
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          boldText(text: "Disc Price: Rs.${data['pd_price']}", color: Colors.black, size: 18.0),
-                          const SizedBox(height: 10),
-                          boldText(text: "Dis Percent: ${data['pd_percentage']}%", color: Colors.black, size: 18.0),
-                        ],
-                      )
-                    else if (data['pd_price'] != null || data['pd_percentage'] != null)
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          if (data['pd_price'] != null)
-                            boldText(text: "Discounted Price: Rs.${data['pd_price']}", color: Colors.black, size: 18.0),
-                          if (data['pd_percentage'] != null)
-                            boldText(text: "Discount Percentage: ${data['pd_percentage']}%", color: Colors.black, size: 18.0),
-                        ],
-                      )
-                    else
-                      boldText(text: "No Discount", color: Colors.black, size: 18.0),                  
-                   
-                    const SizedBox(height: 10),
                     Row(
                       children: [
                         SizedBox(
@@ -161,6 +138,18 @@ class JobsDetails extends StatelessWidget {
               boldText(text: "Description", color: Colors.black, size: 18.0),
               const SizedBox(height: 10),
               normalText(text: "${data['p_desc']}", color: Colors.black, size: 18.0),
+              const SizedBox(height: 20),
+                boldText(text: "Requirement", color: Colors.black, size: 18.0),
+              const SizedBox(height: 10),
+              normalText(text: "${data['p_requirement']}", color: Colors.black, size: 18.0),
+              const SizedBox(height: 20),
+                boldText(text: "Role & Respon", color: Colors.black, size: 18.0),
+              const SizedBox(height: 10),
+              normalText(text: "${data['p_role&responsible']}", color: Colors.black, size: 18.0),
+              const SizedBox(height: 20),
+                boldText(text: "Address", color: Colors.black, size: 18.0),
+              const SizedBox(height: 10),
+               normalText(text: "${data['p_district']}, ${data['p_street']}, ${data['p_ward']}", color: Colors.black, size: 18.0),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {

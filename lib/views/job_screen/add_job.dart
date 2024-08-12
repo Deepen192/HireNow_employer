@@ -120,48 +120,7 @@ class Addjobs extends StatelessWidget {
                     hintStyle: const TextStyle(color: lightGrey),
                   ),
                 ),
-              10.heightBox,
-                 // Input field and buttons for discount calculation
-          //    TextFormField(
-          //   controller: controller.discountController,
-          //   keyboardType: const TextInputType.numberWithOptions(decimal: true),
-          //   decoration: InputDecoration(
-          //     isDense: true,
-          //     label: normalText(text: "Discount(%)"),
-          //     border: OutlineInputBorder(
-          //       borderRadius: BorderRadius.circular(12),
-          //       borderSide: const BorderSide(
-          //         color: Colors.white,
-          //       ),
-          //     ),
-          //     focusedBorder: OutlineInputBorder(
-          //       borderRadius: BorderRadius.circular(12),
-          //       borderSide: const BorderSide(
-          //         color: Colors.white,
-          //       ),
-          //     ),
-          //     hintText: "eg. 10",
-          //     hintStyle: const TextStyle(color: Colors.grey),
-          //   ),
-          // ),
-          5.heightBox,
-            //   ElevatedButton(
-            //     onPressed: () {
-            //       double discountPercentage = double.tryParse(controller.discountController.text) ?? 0.0;
-            //       double originalPrice = double.tryParse(controller.ppriceController.text) ?? 0.0;
-
-            //       controller.calculateDiscountedPrice(originalPrice, discountPercentage);
-            //     },
-            //     style: ElevatedButton.styleFrom(
-            //  backgroundColor: whiteColor, // Text color
-            //   elevation: 0, // Set elevation to 0 to remove shadow
-            // ),
-            //     child: const Text("Calculate Tax"),
-            //   ),
-              // 5.heightBox,
-              // if (controller.discountedPrice.value > 0)
-              //   Text('Price after Tax:  Rs.${controller.discountedPrice.value.toStringAsFixed(2)}'),
-              // 15.heightBox,
+              10.heightBox,    
               TextFormField(
   controller: controller.pquanitytController,
   keyboardType: TextInputType.number, // Show only number keypad
@@ -186,58 +145,6 @@ class Addjobs extends StatelessWidget {
               jobsDropdown("Category", controller.categoryList,controller.categoryvalue,controller),
                10.heightBox,
               jobsDropdown("Subcategory",controller.subcategoryList,controller.subcategoryvalue,controller),
-              // 10.heightBox,
-              // const Divider(color: whiteColor),
-              // boldText(text: "Choose Jobs images"),
-              // 10.heightBox,
-              // Obx(
-              //   ()=> Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //     children: List.generate(
-              //       3,
-              //      (index) => controller.pImagesList[index]!=null
-              //      ?Image.file(controller.pImagesList[index]!,
-              //      width: 100,
-              //      ).onTap(() {
-              //       controller.pickImage(index, context);
-              //      })
-              //      :productImages(label: "${index +1}").onTap(() {
-              //       controller.pickImage(index, context); 
-              //     }),
-              //     ),
-              //   ),
-              // ),
-              // 5.heightBox,
-              // normalText(text: "First image will be your display image",color: lightGrey),
-              //  const Divider(color: whiteColor),
-              10.heightBox,
-              // boldText(text: "Choose product colors"),
-              // 10.heightBox,
-//             Wrap(
-//   spacing: 8.0,
-//   runSpacing: 8.0,
-//   children: controller.colorOptions.map((colorValue) {
-//     final color = Color(colorValue.toInt());
-//     return GestureDetector(
-//       onTap: () {
-//         controller.toggleColorSelection(colorValue.toString());
-//       },
-//       child: Stack(
-//         alignment: Alignment.center,
-//         children: [
-//           VxBox()
-//               .color(color)
-//               .roundedFull
-//               .size(65, 65)
-//               .make(),
-//           controller.isColorSelected(colorValue.toString())
-//               ? const Icon(Icons.done, color: Colors.white)
-//               : const SizedBox(),
-//         ],
-//       ),
-//     );
-//   }).toList(),
-// )
 
             ],
           ), 

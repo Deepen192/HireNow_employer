@@ -1,8 +1,5 @@
-import 'dart:io';
-
 import 'package:flutter_application_2/consts/consts.dart';
 import 'package:flutter_application_2/controllers/jobedit_controller.dart';
-import 'package:flutter_application_2/views/job_screen/components/job_images.dart';
 import 'package:flutter_application_2/widgets_common/loading_indicator.dart';
 import '../../widgets_common/admincustom_textfield.dart';
 
@@ -67,92 +64,77 @@ class EditJobScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              customTextField(hint: "eg.Flutter Developer",label: "Job name",controller: controller.pnameController),
+             customTextField(hint: "eg.Flutter Developer",label: "Jobs name",controller: controller.pnameController),
               10.heightBox,
-               customTextField(hint: "eg.High Demand",label: "Description",isDesc:true,controller: controller.pdescController),           
-              10.heightBox,
-              customTextField(hint: "eg. Rs.100",label: "Price",controller: controller.ppriceController),
+               customTextField(hint: "eg.You can use firebase",label: "Job Description",isDesc:true,controller: controller.pdescController),
+               customTextField(hint: "eg.Bachelor holder",label: "Requirement",isDesc:true,controller: controller.preqController),
+               customTextField(hint: "eg.Backend and Frontend",label: "Roles & Responsibilty",isDesc:true,controller: controller.prolresController),
+               customTextField(hint: "eg.Rupandehi",label: "District",isDesc:true,controller: controller.pdicstrictController),  
+               customTextField(hint: "eg.Supauli",label: "Street",isDesc:true,controller: controller.pstreetController),               
               10.heightBox,
                TextFormField(
-            controller: controller.discountController,
-            keyboardType: const TextInputType.numberWithOptions(decimal: true),
-            decoration: InputDecoration(
-              isDense: true,
-              label: normalText(text: "Discount(%)"),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: const BorderSide(
-                  color: Colors.white,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: const BorderSide(
-                  color: Colors.white,
-                ),
-              ),
-              hintText: "eg. 10",
-              hintStyle: const TextStyle(color: Colors.grey),
-            ),
-          ),
-          5.heightBox,
-              ElevatedButton(
-                onPressed: () {
-                  double discountPercentage = double.tryParse(controller.discountController.text) ?? 0.0;
-                  double originalPrice = double.tryParse(controller.ppriceController.text) ?? 0.0;
-
-                  controller.calculateDiscountedPrice(originalPrice, discountPercentage);
-                },
-                style: ElevatedButton.styleFrom(
-               backgroundColor: whiteColor,
-                elevation: 0, // Set elevation to 0 to remove shadow
-              ),
-                child: const Text("Calculate Discount",style: TextStyle(color: Colors.black),),
-              ),
-              5.heightBox,
-              if (controller.discountedPrice.value > 0)
-                Text('Discounted Price: Rs.${controller.discountedPrice.value.toStringAsFixed(2)}'),
-              15.heightBox,
-             
-              customTextField(hint: "eg. 20",label: "Vacany",controller: controller.pquanitytController),
-              10.heightBox,
-              //  const Divider(color: whiteColor),
-              boldText(text: "Choose product images"),
-              10.heightBox,
-              Obx(
-                  () => Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: List.generate(
-                      3,
-                      (index) {
-                        var image = controller.pImagesList[index];
-                        return image != null
-                          ? (image is File
-                            ? Image.file(
-                                image,
-                                width: 100,
-                              ).onTap(() {
-                                controller.pickImage(index, context);
-                              })
-                            : Image.network(
-                                image as String,
-                                width: 100,
-                              ).onTap(() {
-                                controller.pickImage(index, context);
-                              }))
-                          : productImages(label: "${index + 1}").onTap(() {
-                              controller.pickImage(index, context);
-                            });
-                      },
+                  controller: controller.pwardController,
+                  keyboardType: TextInputType.number,
+                  style: const TextStyle(color: whiteColor),
+                  decoration: InputDecoration(
+                    isDense: true,
+                    labelText: "Ward No.",
+                    labelStyle: const TextStyle(color: whiteColor),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: whiteColor),
                     ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: whiteColor),
+                    ),
+                    hintText: "eg. Rs.100",
+                    hintStyle: const TextStyle(color: lightGrey),
                   ),
                 ),
-              5.heightBox,
-              normalText(text: "First image will be your display image",color: lightGrey),
-               const Divider(color: whiteColor),
-               const Divider(color: whiteColor),
-              10.heightBox,
-               
+                10.heightBox,
+              TextFormField(
+                  controller: controller.ppriceController,
+                  keyboardType: TextInputType.number,
+                  style: const TextStyle(color: whiteColor),
+                  decoration: InputDecoration(
+                    isDense: true,
+                    labelText: "Price",
+                    labelStyle: const TextStyle(color: whiteColor),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: whiteColor),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: whiteColor),
+                    ),
+                    hintText: "eg. Rs.100",
+                    hintStyle: const TextStyle(color: lightGrey),
+                  ),
+                ),
+              10.heightBox,    
+              TextFormField(
+  controller: controller.pquanitytController,
+  keyboardType: TextInputType.number, // Show only number keypad
+  style: const TextStyle(color: whiteColor),
+  decoration: InputDecoration(
+    isDense: true,
+    labelText: "Vacancy",
+    labelStyle: const TextStyle(color: whiteColor),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(color: whiteColor),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(color: whiteColor),
+    ),
+    hintText: "eg. 20",
+    hintStyle: const TextStyle(color: lightGrey),
+  ),
+),
+            
             ],
           ), 
           ),
