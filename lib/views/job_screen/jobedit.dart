@@ -71,7 +71,26 @@ class EditJobScreen extends StatelessWidget {
                customTextField(hint: "eg.Backend and Frontend",label: "Roles & Responsibilty",isDesc:true,controller: controller.prolresController),
                customTextField(hint: "eg.Rupandehi, Tilottama-15, Supauli",label: "Address",isDesc:true,controller: controller.paddressController),  
                customTextField(hint: "eg.Halftime/Fulltime",label: "Job Type",isDesc:true,controller: controller.pjobtypeController),
-                customTextField(hint: "eg.Male/Female",label: "Gender",isDesc:true,controller: controller.pgenderController),                              
+                customTextField(hint: "eg.Male/Female",label: "Gender",isDesc:true,controller: controller.pgenderController),
+                TextFormField(
+                  controller: controller.pkeywordsController,
+                  style: const TextStyle(color: whiteColor),
+                  decoration: InputDecoration(
+                    isDense: true,
+                    labelText: "Keywords (comma-separated)",
+                    labelStyle: const TextStyle(color: whiteColor),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: whiteColor),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: whiteColor),
+                    ),
+                    hintText: "eg. Flutter, Dart, Firebase",
+                    hintStyle: const TextStyle(color: lightGrey),
+                  ),
+                ),                              
               10.heightBox,
               //  TextFormField(
               //     controller: controller.pwardController,

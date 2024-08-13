@@ -37,7 +37,8 @@ class Addjobs extends StatelessWidget {
         controller.prolresController.text.isEmpty ||
         controller.pjobtimeController.text.isEmpty ||
         controller.pjobtypeController.text.isEmpty ||
-        controller.subcategoryvalue.isEmpty) {
+        controller.subcategoryvalue.isEmpty||
+         controller.pkeywordsController.text.isEmpty) {
       // Inform the user to fill all the remaining fields
       showDialog(
         context: context,
@@ -84,6 +85,25 @@ class Addjobs extends StatelessWidget {
                customTextField(hint: "eg.Half time/Full time",label: "Job Type",isDesc:true,controller: controller.pjobtypeController),
                customTextField(hint: "eg.11am-5pm",label: "Job Time",isDesc:true,controller: controller.pjobtimeController),
                customTextField(hint: "eg.Male/Female",label: "Gender",isDesc:true,controller: controller.pgenderController),
+                TextFormField(
+                  controller: controller.pkeywordsController,
+                  style: const TextStyle(color: whiteColor),
+                  decoration: InputDecoration(
+                    isDense: true,
+                    labelText: "Keywords (comma-separated)",
+                    labelStyle: const TextStyle(color: whiteColor),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: whiteColor),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: whiteColor),
+                    ),
+                    hintText: "eg. Flutter, Dart, Firebase",
+                    hintStyle: const TextStyle(color: lightGrey),
+                  ),
+                ),
                                                
                 10.heightBox,
               TextFormField(

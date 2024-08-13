@@ -19,6 +19,7 @@ class JobsController extends GetxController{
         var pjobtypeController=TextEditingController();
         var pgenderController=TextEditingController();
         var pjobtimeController=TextEditingController();
+        var pkeywordsController = TextEditingController();
 
     var categoryList=<String>[].obs;
     var subcategoryList=<String>[].obs;
@@ -60,12 +61,19 @@ void resetForm() {
          pjobtypeController.clear();
          pgenderController.clear();
          pjobtimeController.clear();
+         pkeywordsController.clear(); 
   }
 
 uploadJob(context) async {
    var store = firestore.collection(productsCollection).doc();
      String productId = store.id;
     List<Map<String, String>> initialRatings = [];
+     // Split keywords by comma and trim whitespace
+    List<String> keywords = pkeywordsController.text
+        .split(',')
+        .map((e) => e.trim())
+        .where((e) => e.isNotEmpty) // Filter out empty strings
+        .toList();
   await store.set({
     'p_id': productId,
     'is_featured': false,
@@ -87,6 +95,7 @@ uploadJob(context) async {
     'p_requirement':preqController.text,
     'p_role&responsible':prolresController.text,
    'flashsales': false, 
+   'keywords': keywords,
   });
   isloading(false);
   VxToast.show(context, msg: "Product Uploaded");

@@ -24,6 +24,7 @@ class EditJobsController extends GetxController{
         var pjobtypeController=TextEditingController();
         var pgenderController=TextEditingController();
         var pjobtimeController=TextEditingController();
+        var pkeywordsController = TextEditingController();
   
     
 
@@ -43,6 +44,7 @@ class EditJobsController extends GetxController{
     pjobtypeController.clear();
     pgenderController.clear();
     pjobtimeController.clear();
+    pkeywordsController.clear(); 
 
 
    
@@ -67,6 +69,7 @@ Map<String, dynamic> productData = {}; // Store fetched product data
     pjobtypeController.text=productData['p_jobtype'];
     pgenderController.text=productData['p_gender'];
     pjobtimeController.text=productData['p_jobtime'];
+    pkeywordsController.text=productData['keywords'];
        
         
       }
@@ -98,6 +101,7 @@ Future<void> updateJob(BuildContext context, String productId) async {
     'p_jobtype':pjobtypeController.text,
     'p_requirement':preqController.text,
     'p_role&responsible':prolresController.text,
+    'keywords':pkeywordsController.text,
       // ... (other fields you want to update)
     });
 
