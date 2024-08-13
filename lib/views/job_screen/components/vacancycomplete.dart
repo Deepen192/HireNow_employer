@@ -55,12 +55,12 @@ class VacancyCompletedScreen extends StatelessWidget {
                         ),
                       );
                     },
-                    leading: Image.network(
-                      product['p_imgs'][0],
-                      width: 50,
-                      height: 50,
-                      fit: BoxFit.cover,
-                    ),
+                    // leading: Image.network(
+                    //   product['p_imgs'][0],
+                    //   width: 50,
+                    //   height: 50,
+                    //   fit: BoxFit.cover,
+                    // ),
                     title: Text(product['p_name']),
                     // subtitle: Text('Quantity: ${product['p_quantity']}'),
                     trailing: Text('Rs. ${product['p_price']}'),

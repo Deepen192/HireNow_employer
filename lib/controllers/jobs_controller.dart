@@ -64,7 +64,7 @@ void resetForm() {
 
 uploadJob(context) async {
    var store = firestore.collection(productsCollection).doc();
-    String productId = store.id;
+     String productId = store.id;
     List<Map<String, String>> initialRatings = [];
   await store.set({
     'p_id': productId,

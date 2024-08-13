@@ -126,8 +126,8 @@ class AdminHomeScreen extends StatelessWidget {
                                         data: data[index], userId:userId,
                                       ));
                                 },
-                                leading: Image.network(data[index]['p_imgs'][0],
-                                    width: 100, height: 100, fit: BoxFit.cover),
+                                // leading: Image.network(data[index]['p_imgs'][0],
+                                //     width: 100, height: 100, fit: BoxFit.cover),
                                 title: boldText(
                                     text: "${data[index]['p_name']}",
                                     color: fontGrey),

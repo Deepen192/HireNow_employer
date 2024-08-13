@@ -163,59 +163,6 @@ class JobsDetails extends StatelessWidget {
               const SizedBox(height: 10),
                normalText(text: "${data['p_gender']}", color: Colors.black, size: 18.0),
               const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  showModalBottomSheet<void>(
-                    context: context,
-                    isScrollControlled: true,
-                    builder: (BuildContext context) {
-                      return Container(
-                        padding: const EdgeInsets.all(16.0),
-                        height: MediaQuery.of(context).size.height * 0.9,
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Text(
-                                  'Job Ratings',
-                                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                                ),
-                                IconButton(
-                                  icon: const Icon(Icons.close),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 16),
-                            Expanded(
-                              child: SingleChildScrollView(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: getRatings(data['p_ratings']),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 16),
-                            // ElevatedButton(
-                            //   onPressed: () {
-                            //     Navigator.pop(context);
-                            //   },
-                            //   child: const Text('Back'),
-                            // ),
-                          ],
-                        ),
-                      );
-                    },
-                  );
-                },
-                child: const Text('Show Ratings', style: TextStyle(fontSize: 16, color: Colors.white)),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey, // Button color
-                ),
-              ),
             ],
           ),
         ),

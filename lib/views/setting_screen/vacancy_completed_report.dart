@@ -47,7 +47,7 @@ class VacncySoldScreen extends StatelessWidget {
                 } else {
                   salesData[productId] = {
                     'product_name': productName,
-                    'product_image': product['img'], // Added product image
+                    // 'product_image': product['img'], // Added product image
                     'quantity': quantity,
                     'total_sales': quantity * price,
                   };
@@ -65,12 +65,12 @@ class VacncySoldScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   var salesEntry = salesList[index];
                   return ListTile(
-                    leading: Image.network(
-                      salesEntry['product_image'],
-                      width: 50,
-                      height: 50,
-                      fit: BoxFit.cover,
-                    ),
+                    // leading: Image.network(
+                    //   salesEntry['product_image'],
+                    //   width: 50,
+                    //   height: 50,
+                    //   fit: BoxFit.cover,
+                    // ),
                     title: Text(salesEntry['product_name']),
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

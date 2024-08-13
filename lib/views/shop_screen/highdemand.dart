@@ -94,11 +94,7 @@ class _HighDemandAdminScreenState extends State<HighDemandAdminScreen> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: ListTile(
-        leading: Image.network(
-          product.image,
-          fit: BoxFit.cover, // Make the image fit the entire box
-          width: 80, // Set the width of the image
-        ),
+      
         title: Text(
           product.name,
           style: const TextStyle(color: Colors.white),
@@ -111,8 +107,7 @@ class _HighDemandAdminScreenState extends State<HighDemandAdminScreen> {
               Text("Category: ${product.category}", style: const TextStyle(color: Colors.black)),
               const SizedBox(height: 5),            
               Text("Original Price: \Rs.${product.price.toStringAsFixed(2)}", style: const TextStyle(color: Colors.black)),
-              const SizedBox(height: 5),
-              Text("Discount: ${product.percentage.toStringAsFixed(0)}%", style: const TextStyle(color: Colors.black)),
+    
                 ],
                 ),
         ),
@@ -144,8 +139,6 @@ class Product {
   final String id;
   final String name;
   final double price;
-  final double percentage;
-  final String image;
   final String category;
   final String subcategory;
   bool flashSales;
@@ -154,8 +147,6 @@ class Product {
     required this.id,
     required this.name,
     required this.price,
-    required this.percentage,
-    required this.image,
     required this.category,
     required this.subcategory,
     required this.flashSales,
@@ -166,9 +157,7 @@ class Product {
     return Product(
       id: doc.id,
       name: data['p_name'] ?? '',
-      price: double.tryParse(data['pd_price'] ?? '0.0') ?? 0.0,
-      percentage: double.tryParse(data['pd_percentage'] ?? '0.0') ?? 0.0,
-      image: data['p_imgs'][0] ?? '',
+      price: double.tryParse(data['p_price'] ?? '0.0') ?? 0.0,
       category: data['p_category'] ?? '', // Add this line
       subcategory: data['p_subcategory'] ?? '', // Add this line
       flashSales: data['flashsales'] ?? false,
